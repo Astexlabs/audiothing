@@ -4,6 +4,7 @@ Text-to-Speech (TTS) generation tool powered by NVIDIA Riva / NVCF Chatterbox-Mu
 
 ## Features
 
+- Automatic speech-optimized text sanitization: strips quotes (`"`, `'`), backticks (`` ` ``), hyphens (`-`), underscores (`_`), and markdown artifacts so TTS models don't pronounce punctuation literally.
 - Automatic chunking respecting sentence and clause boundaries within Triton model token limits.
 - Natural speech pauses between sentences and paragraphs.
 - Non-destructive sequential audio file naming (`audio_1.wav`, `audio_2.wav`, etc.).
@@ -50,4 +51,5 @@ options:
   --sample-rate RATE    Sample rate in Hz (default: 22050)
   --sentence-pause SEC  Pause between sentences in seconds (default: 0.25)
   --paragraph-pause SEC Pause between paragraphs in seconds (default: 0.50)
+  --no-sanitize         Disable automatic text sanitization
 ```
