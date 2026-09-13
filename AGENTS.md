@@ -1,0 +1,4 @@
+- docstrings must be just 1 lines 10 words max no essays in docstrings; explain to the user if u need; to after a run
+- no comments in code; code should be visually simple to follow through keep it clean and less twisted break implementations and reuse logic/utils/modules
+- each file must NEVER BE MORE THAN 1000 lines; if writing an implemennation and it is more than 1000 that means you probably needed to break some functions ito their own modules
+- always explore if there is an existing lib/package or simpler way for implementing same request without over over complicating things unneccesrily; push back if user insists unless they insist
