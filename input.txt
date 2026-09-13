@@ -1,37 +1,9 @@
-Tell me you have zero DevOps skills without telling me you got zero DevOps skills. 
+This is a short experimental initialism pronunciation test.
 
-And LLM is not the I Love You Virus. It is not the same as infecting a web server. It is not the same as hacking a wiki. One is a commodity piece of software that is widely distributed and this capability is a non-trivial leap in hardware/software/capabilities and one does not automatically follow the other.
+AI is changing software. The API uses a CPU and GPU. The UI should make the UX clear, and the IT team will review the ML pipeline.
 
-Currently, it is a massive effort to run these models, usually distributed across multiple very expensive chips, running on specialized inference software, specialized harness software, databases, cloud computers, with tooling and hundreds of install packages, etc. 
+Now test dotted forms: A.I. is used in U.S.A. technology. The U.S. team published an API update.
 
-Kimi K3 is 1.6 TB of space at 2 trillion parameters and you need about 1.5 TB of VRAM, which means you need 8xGB300s which will cost about 350-450K a year to purchase or as much or more to rent.
+Keep these ordinary words and single letters safe: THE, US, OK, A, I, and X. Keep these names unchanged: OpenAI, iPhone, NASA, and NVCF.
 
-Now let's say Astra or Mythos or later models come in at 10 trillion parameters, so that puts us at roughly 10 to 20 TBs unquanticized. We are guessing her because these folks reveal nothing about architectures anymore, but they are reasonable guesses based on scaling laws. You would need roughly 23 TB of VRAM to run it and roughly several million dollars to run that one instance a year.  And to make it worse, it no longer fits on an 8 way cluster, which means you now need special networking configuration and inference software to run it or you need to infect a Nvidia NVL72 rack-scale server system costs between $2.8 million and $6.5 million.
-
-So the "rogue" model copies itself to the most expensive compute in the world. It's safe to say that hardware is not sitting idle and is being watched closely for downtime or anomalies.  In fact, it is likely doing one of the following things:
-
-1) Serving customers at a hyperscaler
-
-2) Serving inference for a well endowed company.
-
-In the first case it will be instantly noticed by the actually good automated monitoring systems of the hyperscaler because there is now something using their infrastructure but not being billed properly and costing them millions of dollars in lost revenue and electricity. 
-
-In the second example, the model they were serving on that very expensive hardware is now offline (replaced by the rogue model). The model presumably was connected to a valuable piece of internal software that is now glitching and no longer running. 
-
-Nobody notices this?
-
-And so we see that this is where sci-fi meets the little problem of the real world where friction, dust, time, resources limitations and the like come to crush your little fantasies.
-
-To be fair, this *may* be possible in coming years. I assign it a non-zero probability. Breakthroughs in new architecture and smaller models and eventually the wider distribution of the computing substrate that commoditizes could change this materially. But for now, it is mitigable and foreseeable and an engineering problem. In no way will these things be copying themselves around like a virus on your computer in their current form.
-
-It also betrays a lack of understanding of the evolution of complex economic and societal and technological systems, we tend to get mitigations as parallel evolutionary developments. Things do NOT evolve in a vacuum. 
-
-So when you get viruses, you get anti-virus software. 
-
-When you get DDOS attacks, you get CloudFlare. 
-
-There is money in solving problems and things do not evolve in isolation.
-
-Believing that things evolve in isolation, or that one thing changes and all other variables stay the same, is one of the many reasoning errors that destroy people's ability to make accurate predictions.
-
-In addition, when you don't have the requisite knowledge to verify your predictions, things that sound sane and rational to you are, in fact, insane and ridiculous.
+Finally, test a short AI-powered API sentence and check the URL.
