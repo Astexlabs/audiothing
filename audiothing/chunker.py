@@ -4,12 +4,17 @@ Text segmentation and chunking for Triton/Riva model input limits.
 
 import re
 
+from audiothing.config import DEFAULT_MAX_CHARS
 
-def prepare_speech_units(text: str, max_chars: int = 350) -> list[tuple[str, bool]]:
+
+def prepare_speech_units(
+    text: str, max_chars: int = DEFAULT_MAX_CHARS
+) -> list[tuple[str, bool]]:
     """
     Splits input text into manageable chunks respecting sentence and clause boundaries.
-    The Triton Chatterbox model has a hard limit of 500 tokens/characters per request,
-    so each chunk is kept strictly under max_chars (default 350).
+    The Triton Chatterbox model has a hard output limit of approximately 500
+    speech tokens. A conservative character limit helps avoid truncation even
+    though characters and generated speech tokens are not equivalent.
 
     Returns a list of (chunk_text, is_paragraph_end) tuples so appropriate pause durations
     can be inserted between sentences vs paragraphs.
@@ -18,7 +23,7 @@ def prepare_speech_units(text: str, max_chars: int = 350) -> list[tuple[str, boo
     units: list[tuple[str, bool]] = []
 
     for p in raw_paragraphs:
-        sentences = re.split(r'(?<=[.!?])\s+', p)
+        sentences = re.split(r"(?<=[.!?])\s+", p)
         p_chunks: list[str] = []
         cur = ""
         for s in sentences:
@@ -31,7 +36,7 @@ def prepare_speech_units(text: str, max_chars: int = 350) -> list[tuple[str, boo
                     p_chunks.append(cur)
                     cur = ""
                 # Split large sentence on clause punctuation (,;:)
-                subparts = re.split(r'(?<=[,;:])\s+', s)
+                subparts = re.split(r"(?<=[,;:])\s+", s)
                 for part in subparts:
                     part = part.strip()
                     if not part:
@@ -66,7 +71,7 @@ def prepare_speech_units(text: str, max_chars: int = 350) -> list[tuple[str, boo
             chunk = chunk.strip().strip(",;:").strip()
             if not chunk:
                 continue
-            is_end = (i == len(p_chunks) - 1)
+            is_end = i == len(p_chunks) - 1
             units.append((chunk, is_end))
 
     return units
