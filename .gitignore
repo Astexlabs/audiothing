@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Output audio
+output/
+*.wav
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Third-party repositories
+python-clients/
